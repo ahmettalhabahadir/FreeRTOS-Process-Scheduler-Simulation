@@ -8,8 +8,8 @@
 #ifndef SCHEDULER_H
 #define SCHEDULER_H
 
-#include "FreeRTOS. h"
-#include "task. h"
+#include "FreeRTOS.h"
+#include "task.h"
 #include "semphr.h"
 #include <stdint.h>
 #include <stdbool.h>
