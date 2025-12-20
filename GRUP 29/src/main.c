@@ -57,7 +57,7 @@ BaseType_t create_freertos_task_for_scheduler(Task_t* task) {
 void dispatcher_task(void* pvParameters) {
     Scheduler_t* scheduler = (Scheduler_t*)pvParameters;
     
-    // Başlangıçta zamanı sıfırla (ondalıklı)
+    // Başlangıçta zamanı sıfırla (ondalıklı olarak)
     scheduler->current_time = 0.0; 
     
     while (1) {

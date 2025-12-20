@@ -116,7 +116,7 @@ void scheduler_check_arrivals(Scheduler_t* scheduler) {
 }
 
 /**
- * @brief Zaman aşımı kontrolü (Hassas zamanlı)
+ * @brief Zaman aşımı kontrolü (Hassas zamanlı olarak)
  */
 void scheduler_check_timeouts(Scheduler_t* scheduler) {
     if (scheduler == NULL) return;

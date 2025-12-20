@@ -35,12 +35,12 @@ Task_t* task_create(uint32_t task_id, uint32_t arrival_time, uint32_t priority, 
         return NULL; // Bellek hatası
     }
 
-    // 2. İsim Ataması
+    // 2. İsim Ataması Kısmı
     // scheduler.h'de task_name[32] bir dizi olduğu için malloc yapılmaz, 
     // doğrudan sprintf ile içine yazılır.
     sprintf(new_task->task_name, "T%u", task_id);
 
-    // 3. Değişkenlerin Atanması (scheduler.h'deki isimlere göre)
+    // 3. Değişkenlerin Atanması Kısmı (scheduler.h'deki isimlere göre)
     new_task->task_id = task_id;          // id -> task_id
     new_task->arrival_time = arrival_time;
     new_task->priority = priority;
@@ -61,7 +61,7 @@ Task_t* task_create(uint32_t task_id, uint32_t arrival_time, uint32_t priority, 
     return new_task;
 }
 
-/* * Görev Silme ve Bellek Temizleme Fonksiyonu 
+/* * Görev Silme ve Bellek Temizleme Fonksiyonuları
  */
 void task_destroy(Task_t* task) {
     if (task == NULL) return;
