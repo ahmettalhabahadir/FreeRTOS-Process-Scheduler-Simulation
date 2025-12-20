@@ -72,23 +72,18 @@ FreeRTOS_PC_Scheduler/
 - Make (önerilir)
 - FreeRTOS POSIX Port
 
-### Makefile ile
+### Derleme
 ```bash
 make
 ```
 
-### Manuel Derleme
-```bash
-gcc -o scheduler main.c scheduler.c tasks.c \
--I. -I/path/to/freertos/include -lpthread
-```
 
 ---
 
 ## ▶️ Çalıştırma
 
 ```bash
-./scheduler
+./freertos_sim giris.txt
 ```
 
 ---
