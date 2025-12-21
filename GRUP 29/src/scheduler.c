@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* * DİKKAT: task_create ve task_destroy fonksiyonları tasks.c dosyasına taşınmıştır. */
+/* * task_create ve task_destroy fonksiyonları tasks.c dosyasına taşınmıştır. */
 
 /**
  * @brief Zamanlayıcıyı başlatır.
@@ -17,7 +17,7 @@ void scheduler_init(Scheduler_t* scheduler) {
         queue_init(&scheduler->queues[i]);
     }
     
-    scheduler->current_time = 0.0;     // DEĞİŞİKLİK: Ondalıklı başlatma (0.0)
+    scheduler->current_time = 0.0;     // Ondalıklı başlatma (0.0)
     scheduler->current_task = NULL;
     scheduler->task_counter = 0;
     scheduler->pending_tasks = NULL;
@@ -102,7 +102,7 @@ void scheduler_check_arrivals(Scheduler_t* scheduler) {
                 task_to_add->creation_time = scheduler->current_time;
             }
             
-            // DEĞİŞİKLİK: Bekleme süresi başlangıcını tam o anki hassas süre olarak kaydet
+            // Bekleme süresi başlangıcını tam o anki hassas süre olarak kaydet
             task_to_add->abs_wait_start = scheduler->current_time;
 
             if (task_to_add->priority < MAX_PRIORITY_LEVELS) {
